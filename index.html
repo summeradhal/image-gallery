@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Photo Gallery Using HTML and CSS</title>
+
+	<style type="text/css" media="screen">
+		
+		#gallery{
+			/* set background to black */
+			background:black;
+			/* text color to white */
+			color:white;
+			/* put everything inside the gallery wrapper, center */
+			text-align:center;
+
+			/* force the page to be at least 100% tall */
+			min-height:100vh;
+
+		}
+		#middle img{
+		/* set the width of the thumbnail images */
+			width: 15%;
+			/* set the border properties in shorthand(with style color) */
+			border: 4px solid #555;
+			/* border-width:4px;
+			border-style:solid;
+			border-color:#555; */
+
+		}
+		#middle img:hover{
+			/* make the border blue when the user hovers over image */
+			border:4px solid #F00;
+			/* make the cursor a mouse when the user hovers over */
+			cursor:pointer;
+		}
+
+		#bottom img{
+			/* force the image to be 55% of the width of the wrapper */
+			width:55%;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+
+<!-- Create a master wrapper for the whole gallary to live insdie of -->
+<div id="gallery">
+<!-- Make the top layer div for the title -->
+	<div id="top">
+<!-- put our title inside an H2 tag -->
+		<h2> Image Gallery in HTML and CSS </h2>
+</div>
+<!-- Make the middle laye div to put our thumbnails in -->
+<div id="middle">
+	<img src="images/image1.jpg" onmouseover="largepic.src='images/image1.jpg'">
+	<img src="images/image2.jpg" onmouseover="largepic.src='images/image1.jpg'">
+	<img src="images/image3.jpg" onmouseover="largepic.src='images/image1.jpg'">
+	<img src="images/image4.jpg" onmouseover="largepic.src='images/image1.jpg'">
+	<img src="images/image5.jpg" onmouseover="largepic.src='images/image1.jpg'">
+</div>
+<!-- make the bottom div for our large review -->
+<div id="bottom">
+<!-- Make the large preview image -->
+<img src="images/image1.jpg" name="largepic">
+</div>
+
+</body>
+</html>
