@@ -26,13 +26,50 @@
 		}
 		
 		#left{
-			width:20%;
-			float: left;
+			/* My children(thumbnail) are floating, i need to know how tall they are. OVERFLOW! */
+			overflow:hidden;
+			/* make me 75% so i dont take up the whole screen */
+			width:75%;
+			/* to set my margin my margin to auto so the margin left over from my width(25%) is divided evenly on all sides */
+			margin:auto;
 		}
 
 		#right {
-			width:60%;
-			float:right;
+			
+		}
+
+		.thumbnail{
+			width:20%;
+			position:absolute;
+			box-sizing:border-box;
+
+		}
+
+		.one{
+			border:5px red solid;
+			top:0%;
+			left:0%;
+		}
+
+		.two{
+			top:0%;
+			left:20%;
+
+		}
+
+		.three{
+			top:0%;
+			left:40%;
+		}
+
+		.four{
+			top:0%;
+			left:60%;
+		}
+
+		.five{
+			top:0%;
+			left:80%;
 		}
 
 
@@ -50,11 +87,29 @@
 </div>
 <!-- Make the middle laye div to put our thumbnails in -->
 <div id="left">
+<!-- add a div to hold the image. Divs are nice bc they are blocks. Images are not nice, bc they are inline  -->
+<!-- add the samle class(tumbnail) to each div so we can target them at the same time. -->
+<!--Add a unique classto each div so we can target them individually -->
+<div class="thumbnail one">
 	<img src="images/image1.jpg" onmouseover="largepic.src='images/image1.jpg'">
+</div>
+
+<div class="thumbnail two">
 	<img src="images/image2.jpg" onmouseover="largepic.src='images/image2.jpg'">
+</div>
+
+<div class="thumbnail three">
 	<img src="images/image3.jpg" onmouseover="largepic.src='images/image3.jpg'">
+</div>
+
+<div class="thumbnail four">
 	<img src="images/image4.jpg" onmouseover="largepic.src='images/image4.jpg'">
+</div>
+
+<div class="thumbnail five">
 	<img src="images/image5.jpg" onmouseover="largepic.src='images/image5.jpg'">
+</div>
+
 <!-- </div>make the preview box on the right side to populate our thumbnail -->
 </div>
 

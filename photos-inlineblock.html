@@ -15,24 +15,31 @@
 
 			/* force the page to be at least 100% tall */
 			min-height:100vh;
-			/* i need overflow hidden so my children can be forced to tell me how tall they are float will also work,
-			 but i dont want to float */
-			 overflow:hidden;
 
 		}
 
 		img{
+			/* i make images no bigger than their parents */
 			max-width:100%;
 		}
 		
+		#left,#right{
+			display:inline-block;
+		}
 		#left{
+			/* i make the div 20% the width of my parent  */
 			width:20%;
-			float: left;
+			/* i make the the div go all the way to the left of my parent, i no longer 
+			acknowledge non-floated elements */
+			
 		}
 
 		#right {
+		/* i make the div 60% the width of my parent  */
 			width:60%;
-			float:right;
+			/* i make the the div go all the way to the right of my parent, i no longer 
+			acknowledge non-floated elements */
+			
 		}
 
 
